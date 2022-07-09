@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Chrome",
+            "request": "launch",
+            "type": "dart",
+            "args": ["-d", "chrome", "--web-port", "8000", "--web-renderer", "html"]
+        },
+        {
+            "name": "Web-Server",
+            "request": "launch",
+            "type": "dart",
+            "args": ["-d", "web-server", "--web-port", "8000", "--web-renderer", "html"]
+        },
+        {
+            "name": "SuprLink",
+            "request": "launch",
+            "type": "dart",
+        },
+        {
+            "name": "wallet_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "wallet_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "wallet_app (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
