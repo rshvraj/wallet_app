@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -7,6 +8,8 @@ import 'package:wallet_app/utilities/direct_login.dart';
 import 'package:wallet_app/utilities/sign_in_page.dart';
 
 import 'firebase_options.dart';
+
+bool shouldUseFirestoreEmulator = false;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +22,9 @@ Future<void> main() async {
     //   projectId: 'wallet-aap',
     // ),
   );
+  if (shouldUseFirestoreEmulator) {
+    FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
+  }
   runApp(MyApp());
 }
 
